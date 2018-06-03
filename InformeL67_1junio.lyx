@@ -1,0 +1,1393 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\fancyhf{}               % Clear fancy header/footer
+\fancyfoot[R]{\thepage}  % Page number in Right footer
+\makeatletter
+\let\ps@plain\ps@fancy   % Plain page style = fancy page style
+\makeatother
+\pagestyle{headings}
+
+
+\makeatletter
+\@addtoreset{figure}{part}% Reset figure numbering at every part
+\makeatother
+\renewcommand{\thefigure}{\arabic{part}.\arabic{figure}}% Figure number is part.figure
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 3.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Caracterización de una skipper CCD para medición del factor de Fano en silicio
+\end_layout
+
+\begin_layout Standard
+\align center
+André Donadón Servelle
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 12cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\align center
+Laboratorio 6 y 7
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\align center
+Departamento de Física - FCEyN - UBA 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\align center
+Julio 2018
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ALUMNO: 
+\end_layout
+
+\begin_layout Standard
+André Donadón Servelle
+\end_layout
+
+\begin_layout Standard
+LUGAR DE TRABAJO:
+\end_layout
+
+\begin_layout Standard
+Silicon Detector Facility - Fermi National Accelerator Laboratory
+\end_layout
+
+\begin_layout Standard
+DIRECTOR DEL TRABAJO:
+\end_layout
+
+\begin_layout Standard
+Javier Tiffenberg - vierjat@gmail.com
+\end_layout
+
+\begin_layout Standard
+CODIRECTOR:
+\end_layout
+
+\begin_layout Standard
+Dario Rodrigues Ferreira Maltez - dariorodriguesfm@gmail.com
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Resumen
+\end_layout
+
+\begin_layout Standard
+En este informe blablabla
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Subsection
+
+\emph on
+Charge Couple Devices 
+\emph default
+(CCDs)
+\end_layout
+
+\begin_layout Standard
+En el año 1969, en los laboratorio Bell, Willard Boyle y George Smith crean
+ los CCDs (ver Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "label1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(a) primer prototipo), buscando con ellas obtener un nuevo dispositivo con
+ función de memoria.
+ Este objetivo original no logró properar, pero los CCDs mostraron un enorme
+ potencial como sensores de luz y de partículas.
+ Es tan notable la invención de este detector, que Boyle y Smith recibieron
+ en el año 2010 el premio Nobel en física
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1,key-2"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los CCDs se han desarrollado enormemente luego de casi 50 años desde su
+ creación, mas tres innovaciones son realmente destacables, y han permitido
+ alcanzar el estado actual de este dispositivo.
+ En 1974, Boyle y Smith generan el buried-chanel CCD, donde la carga se
+ transfiere por una juntura P-N logrando una eficiencia mayor al 99 %{ref}.
+ Por otro lado, el uso de una difusión semiconductora flotante en el diodo
+ de salida permitió la aplicación de la tecnica de correlated-double-sampling,
+ y reducir de esta forma el ruido de lectura {ref}.
+ Finalmente, con el objetivo de lograr una mejor eficiencia cuántica en
+ el infrarrojo, se desarrollaron los fully-depleted CCD{ref}, los cuales
+ permiten tener mayor espesor de silicio activo (hasta 250 μm) en un área
+ de varios 
+\begin_inset Formula $cm^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Con el fin de comprender el funcionamiento de este detector, la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "estructuraCCD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ muestra una CCD simplificada de 4x4 pixeles.
+ La operación de un CCD se puede dividir en cuatro etapas: exposición del
+ detector, colección, transferencia y medición de la carga.
+ Al exponer el detector a la luz (o partícula ionizante), pares electrón-hueco
+ (e-h) se generan en el silicio, y las cargas (huecos n-type CCD o electrones
+ p-type CCD) son colectadas en los pixeles al ser movilizados por la tensión
+ de bias impuesta.
+ Terminada la exposición y colección de la carga, esta es trasferida pixel
+ a pixel para así ser medida en forma secuencial.
+\end_layout
+
+\begin_layout Standard
+El desplazamiento en dirección vertical se controla mediante tres señales:
+ V1, V2 y V3, denominadas fases.
+ Los channel-stops impiden que la carga de desplace entre columnas de píxeles.
+ Para leer los píxeles se procede del siguiente modo: se realiza un corrimiento
+ de un pixel de los registros verticales hacia el registro horizontal.
+ En el registro horizontal, se realiza un desplazamiento hacia el sense-node
+ (SN), el cual se trata de un capacitor que se carga con los electrones
+ o huecos del pixel que se quiere leer.
+ Su capacidad es del orden de ≈ 0.05 pF, lo cual permite una sensibilidad
+ de 3 μV/e − .
+ 
+\end_layout
+
+\begin_layout Standard
+Esta última característica, junto con una apropiada electrónica de lectura,
+ y todos los avances comentados previamente, han permitido que las CCDs
+ actuales posean perdidas depreciables de carga durante la trasferencia,
+ una eficiencia cuantica sin precedentes en el infrarojo y ruidos de lectura
+ tan bajos como
+\series bold
+ 
+\begin_inset Formula $2e^{-}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+(a) Primer CCD creada
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/firstCCD.jpg
+	lyxscale 60
+	scale 60
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+(b) Transferencia de cargas
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/ccdTransfer.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "label1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Skipper CCD
+\end_layout
+
+\begin_layout Standard
+En 1979, James Janesick propone el skipper CCD {ref}, el cual permitiría,
+ al medir multiples veces la carga de los pixeles y tomar el promedio como
+ el estimador de la carga, reducir drásticamente el ruido de lectura y medir
+ exactamente la cantidad de cargas en cada pixel.
+ Ya esta última afirmación es suficiente para querer llevar a cabo esta
+ tecnología, pero más aún, esta daría la posibilidad de realizar mediciones
+ a bajas energía que son imposibles con las CCDs actuales, a pesar del bajo
+ nivel de ruido de lectura que poseen.
+\end_layout
+
+\begin_layout Standard
+Casi 40 años después de la propuesta de Janesick, y tras muchos intentos
+ y avances {ref}, en el laboratorio Fermilab, finalmente se logro un skipper
+ CCD perfectamente funcional {ref}.
+ Como se comento previamente, el skipper reduce el ruido de lectura tomando
+ multiples muestras de la carga en cada pixel.
+ En la figura {}, se muestra el resultado luego de promediar 10, 200, 1000
+ y 3000 muestras.
+ A partir de 1000 muestras el ruido efectivo de lectura es menor a 
+\begin_inset Formula $0.15$
+\end_inset
+
+ 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+, mientras que, Como se observa en la figura 5.16, a 4000 muestras el resultado
+ es una reducción drástica al nivel de 
+\begin_inset Formula $0.068e^{-}$
+\end_inset
+
+.
+ A este nivel la probabilidad de mal estimar en 
+\begin_inset Formula $\geqq0.5$
+\end_inset
+
+ 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ la carga del pixel es ≈ 
+\begin_inset Formula $10^{-13}$
+\end_inset
+
+ , demostrando la notable capacidad del skipper CCD de cuantizar la cantidad
+ de carga.
+\end_layout
+
+\begin_layout Standard
+Respecto al rango dinamico de este detector, la figura {} muestra que el
+ ruido para pixeles sin carga y con 
+\begin_inset Formula $\backsimeq$
+\end_inset
+
+ 800 
+\begin_inset Formula $e^{-}$
+\end_inset
+
+ es el mismo.
+\end_layout
+
+\begin_layout Standard
+Una de las caracteristicas del skipper es que las mediciones no destructivas
+ de carga que realiza son no correlacionadas, y como consecuencia, el desvio
+ estandar del promedio, el cual es el estimador optimo, decrece con el numero
+ de muestras como 
+\begin_inset Formula $\frac{\text{\ensuremath{\sigma_{1}}}}{\sqrt{N}}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\sigma_{1}$
+\end_inset
+
+ es el ruido de una muestra, y N es numero de muestras tomadas.
+ La figura {} muestra que el rudio del skipper CCD se aproxima en gran medida
+ a la teoría, solo apartandoce levemente para N
+\begin_inset Formula $\geq2000$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/structureCCD.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "estructuraCCD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Factor de Fano en Silicio
+\end_layout
+
+\begin_layout Standard
+Cuando una partícula incidente interactúa con el silicio del detector y
+ deposita energía, una fracción produce ionización creando pares e-h y la
+ restante se disipa en forma de calor (vibraciones de la red cristalina).
+ La fluctuación en la fracción de energía que se transfiere a ionización
+ es la que da origen a una distribución de pares e-h producidos para una
+ energía fija depositada.
+ El factor de Fano en silicio se define como el cociente entre la varianza
+ y la media de esta distribución 
+\begin_inset Formula $F=\text{\ensuremath{\frac{\sigma^{2}}{\mu}}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Este parametro fue medido a lo largo de los años con el uso de CCDs y otros
+ detectores de silicio{ref}.
+ Sin embargo, nunca se realizo una mediciones exhaustiva variando la energía
+ depositada en el silicio, y para una rango de temperaturas de este semiconducto
+r.
+ El factor de Fano es un parametro necesario para la calibracion de todo
+ detector de silicio {ref}, y su valor experimental es importante con el
+ fin de avanzar en el campo de la teoría de materia condensada.
+\end_layout
+
+\begin_layout Subsection
+Objetivo - Estructura del informe
+\end_layout
+
+\begin_layout Standard
+En este infome se expone los trabajos llevados a cabo en la construcción
+ del sistema que será utilizado para la medición del factor de Fano en silicio
+ para un rango de energías depositadas y temperaturas del silicio.
+ Se hace particular más enfasis en la caracterizacion de una skipper CCD
+ para tal fin.
+ 
+\end_layout
+
+\begin_layout Standard
+Respecto a laboratorio 6, se muestran los componentes del setup, la calibración,
+ primeras mediciones del factor de Fano utilizando una fuente de Fe-55,
+ y los resultados del uso de fluorescencia para generar fotones de baja
+ energía.
+ 
+\end_layout
+
+\begin_layout Standard
+Luego, en lo correspondiente a laboratorio 7, se describen los esfuerzos
+ llevados a cabo con el fin de lograr resolver los retos encontrados durante
+ laboratorio 6, y a su vez se expone las simulaciones montecarlo realizadas,
+ necesarias para un adecuado procesamiento de los datos.
+\end_layout
+
+\begin_layout Standard
+Finalmente, dado que se contuará este proyecto para la realización de una
+ tesis de licenciatura, se detalla una lista de perspectiva de trabajos
+ a realizar con el fin de cumplir con el objetivo primordial de medir el
+ factor de Fano en silicio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Laboratorio 6
+\end_layout
+
+\begin_layout Subsection
+Setup
+\end_layout
+
+\begin_layout Standard
+En la figura {ref} se muestra una imagen del setup experimental.
+ Se puede observar, en el centro, la cámara de vacío que contiene dentro
+ a la CCD.
+ El vacío alcanzado dentro de la camara es generado por una bomba turbomolecular
+ Pfeiffer HiCube 80 ECO, y alcanza valores de presión del orden de 
+\begin_inset Formula $10^{-7}$
+\end_inset
+
+ mbar.
+ El vacío es necesario dado que la CCD debe ser refrigerada para minimizar
+ las cargas generadas por fluctuaciones terminas del silicio (Dark Current).
+ El valor de temperatura en que la CCD funciona de manera optima ronda los
+ 100 K, y para alcanzar esas temperaturas se utiliza un Cryocooler, el cual
+ enfria una placa de cobre a la cual la CCD se encuentra adherida{ref}.
+ El Cryocooler es utilizado a su maxima potencia, obteniendo temperaturas
+ cercanas a los 80 K.
+ Para obtener un control mayor en la temperatura, una resistencia (Heater)
+ colocada en la placa de cobre permite calentar la CCD a la temperatura
+ final deseada, la cual es medida por un sensor Pt-100, también sujeto al
+ cobre.
+ El Pt-100 está conectado a un controlador de temperatura Lakeshore, el
+ cual a su vez se encarga de manipular el Heater.
+ El sistema de lectura utilizado es el Monsoon, un sistema open-source (Codigo
+ abierto) de adquisición de imágenes desarrollado por NOAO (National Optical
+ Astronomy Observatory) {ref}, libre de ser utilizado por la comunidad científic
+a.
+\end_layout
+
+\begin_layout Standard
+El CCD utilizado fue diseñado en el grupo de microelectrónica del LBNL (Lawrence
+ Berkeley National Lab) y fabricados por la empresa DALSA.
+ Se fabricaron en un substrato de silicio tipo-n de 200 μm de espesor, con
+ un silicio utilizado de alta resistividad (≈ 10 kΩ), y posee 1248x724 píxeles
+ de tamaño 15×15 
+\begin_inset Formula $μm^{2}$
+\end_inset
+
+ .
+ Los registros horizontales y verticales tienen tres fases que permiten
+ hacer la lectura del dispositivo a través de cada cuadrante: U1, L1, U2
+ y L2 {ref}, i.e.
+ la CCD posee para su lectura, 4 amplificadores distintos, permitiendo cuadrupli
+car el tiempo de medición.
+ Para las experiencias realizadas, se procuró utilizar el cuadrante U1,
+ cuyo amplificador posee el menor ruido de lectura.
+\end_layout
+
+\begin_layout Subsection
+Procesamiento de las imagenes
+\end_layout
+
+\begin_layout Standard
+En la figura {ref} se muestra una de las imágenes adquiridas luego de ser
+ procesada.
+ En la misma, se observa la ionización generada por distintas partículas,
+ en particular, son notorios los tracks de electrones, los cuales son facilmente
+ reconocibles por la forma de 
+\begin_inset Quotes cld
+\end_inset
+
+gusano
+\begin_inset Quotes crd
+\end_inset
+
+ que describlen, debida a que en el proceso de ionizacion estos son dispersados
+ por electrones y núcleos del silicio.
+ El otro track notorio es el de muones, los cuales poseen la misma carga
+ que los electrones, mas debido a que su masa es 200 veces superior, su
+ dirección no cambia, y por lo tanto los tracks son rectos.
+ 
+\end_layout
+
+\begin_layout Standard
+En la parte derecha de la imagen se distingue una región denominada overscan
+ [34].
+ Estas mediciones son generadas del siguiente modo.
+ Si el registro horizontal {ref} tiene N píxeles, se realiza una lectura
+ de N más No píxeles.
+ Los No píxeles extras solo fueron expuestos el tiempo que se tarda en leer
+ los primeros N píxeles, por tanto la mayoria de ellos son mediciones de
+ carga nula, y justamente, son útiles para estimar la línea de base de la
+ fila de píxeles.
+ Por la parte izquierda, se puede observar el prescan.
+ Estas mediciones son 7 pixeles adicionales que posee el registro horizontal,
+ cuyo fin es el de proveer un retardo temporal para que la señal de video
+ se estabilice para la mediciones de los pixeles de la zona activa, es decir,
+ los pixeles expuestos.
+\end_layout
+
+\begin_layout Standard
+Para comprender el método de procesamiento, la figura {ref} muestra una
+ fracción de imagen adquirida con 20 muestras por pixel, en la que se distingue
+ la parte expuesta con eventos y el overscan.
+ Si la imagen fue adquirida con N muestras por pixel, para el procesamiento
+ se forman N imágenes (
+\begin_inset Formula $I_{1},I_{2},...,I_{N}$
+\end_inset
+
+ ), donde la imagen 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ está compuesta por la muestra 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+ de los píxeles.
+ Sobre cada una de las imágenes generadas se substrae el overscan y luego
+ todas las imágenes son promediadas para obtener el resultado final.
+ 
+\end_layout
+
+\begin_layout Standard
+Conociendo la ganancia (calibración), ya se obtiene el valor de carga en
+ cada pixel, mas ese no es el fin de la historia.
+ Como se observo previamente, al interactuar las particular con el silicio,
+ las cargas generadas no son colectadas en un pixel individual, sino que
+ se generan clusters.
+ Una propiedad notable del skipper CCD es que, dado que se conoce la carga
+ exacta en cada pixel, el proceso de extraer los clusters es trivial, ya
+ que siemplemente se basa en analizar aquellos pixeles que posee carga y
+ agruparlos con aquellos que son vecinos para obtener el track.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/setup.jpg
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/andre/Desktop/imageFinal.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Calibración
+\end_layout
+
+\begin_layout Standard
+En el diagrama {ref} se observa el proceso de adquisicion de una imagen
+ con un CCD.
+ Como se comento en secciones anterior, al interactuar un foton de baja
+ energia ( < keV), su energía es depositada en el el silicio por efecto
+ fotoelectrico, generando pares e-h que son colectados en los pixeles del
+ detector.
+ La carga del colectada por el pixel es convertida a tensión en el circuito
+ de salida, luego multiplicada y procesada, para finalmente ser convertida
+ a un valor digital por un ADC (Analog-Digital Converter), obteniendo como
+ medición un valor entero en ADUs (Analog-Digital Units).
+ En esta sección se mostrara el método utilizado para la calibración del
+ sistema,, es decir a cúantas unidades de ADUs equivale un electrón, y a
+ su vez probar la linealidad de la ganancia hasta los 5 keV, rango de interes
+ para las subsiguientes mediciones del factor de Fano
+\end_layout
+
+\begin_layout Standard
+Una sorprendente cualidad del skipper CCD es su autocalibración, lo cual
+ se refiere a la independencia del conocimiento de un parámetro externo
+ para su calibración.
+ Lo único necesario, y que fue lo realizado para la calibracion, es el uso
+ un LED (instalado dentro de la camara de vacio) que permita generar cargas
+ en el detector, y puesto que con el skipper es posible cuantizar la carga
+ en cada pixel, se debe generar suficiente carga para obtener las distribuciones
+ asociadas a cada valor de ocupancia de cargas, y utilizando la media de
+ cada distribucion, relacionar este numero al valor de cargas correspondiente.
+ La experiencia fue realizada del siguiente modo.
+ Dado que la carga generada por el LED forma una distriución de Poisson{ref},
+ a mayor tiempo de exposicion, mayor será la media de la distribución, y
+ a su vez los picos asociados a cada carga disminuiran, puesto que la varianza
+ también aumenta.
+ Para evitar zonas con poca estadistica, se utilizó un paso de 1 segundo
+ para cada mediciones, leyendo 10 filas de la CCD expuestas a la luz del
+ LED, y utilizando 2000 muestras de skipper, con la temperatura del silicio
+ a 113K.
+\end_layout
+
+\begin_layout Standard
+La figura {ref} se observa las mediciones para una exposición de 1 segundo.
+ Son notables las distribuciones para cada valor de carga, y es importante
+ observar que la distribución de Poisson comentada previamente no se distingue
+ completamente puesto que el pico de carga cero es mayor debido a las mediciones
+ del overscan.
+ La figura {ref} muestra el resultado obtenido hasta una exposición de mil
+ segundos.
+ En el mismo, se realizó un ajuste con un polinomio de orden 2 para analizar
+ las contribuciones no lineales.
+ 
+\end_layout
+
+\begin_layout Standard
+*Hacer imagen que ajuste los picos*
+\end_layout
+
+\begin_layout Standard
+*Otra que muestre las variaciones en la ganancia*
+\end_layout
+
+\begin_layout Standard
+En la figura {ref} se observa un bias entre los picos de un tiempo de exposición
+ de ?? y otro de ??.
+ Este resultado implica que hubo una variación en la ganancia entre una
+ medición y la otra, lo cual efectivamente afecta imposibilita realizar
+ una adecuada calibración del dispositivo.
+ 
+\end_layout
+
+\begin_layout Standard
+La busqueda de una solución a problema será tratado en lo concerniente a
+ Laboratorio 7.
+ Para las mediciones que se expondrán en las siguientes secciones se asumió
+ la linealidad de la ganancia, y su valor se tomó como la diferencia entre
+ la media del pico de 1 y 0 electrones *valor de la ganancia*.
+\end_layout
+
+\begin_layout Subsection
+Fuentes de fotones
+\end_layout
+
+\begin_layout Standard
+Un componente fundamental del setup que no se mencionó previamente es la
+ fuente emisora de fotones para depositar energía en el silicio.
+ Dado el interes de realizar las medicones del factor de Fano en el rango
+ de los rayos-X, dos fuentes distintas son utilizadas para obtener, en un
+ caso, fotones con energias del orden de keV, y otro para fotones con eV.
+ El primer caso es utilizar fuentes radioactivas, de las cuales se posee
+ variedad en el laboratorio SiDet, como Fe-55, Am-241, Co-57, entre otras.
+ Mientras que el segundo caso trata del uso de estas fuentes radioactivas,
+ pero como medio de excitar muestras, que por fluorescencia generen fotones
+ de baja energía.
+ 
+\end_layout
+
+\begin_layout Subsection
+Fe-55
+\end_layout
+
+\begin_layout Standard
+La fuente radiactiva de Fe-55 decae por captura electronica a Mn-55, y en
+ el proceso emite rayos-X con energías de 5.89875 keV (probabilidad 16.2%),
+ 5.88765 keV (prob.
+ 8.2%) , o 6.49045 keV (prob.
+ 2.85%){ref}.
+ En la figura {ref} se muestra una imagen típica de las interacciones del
+ Fe-55 con el silicio a T=113K.
+ Por otro lado, la figura ?? muestra el histograma obtenido luego de superponer
+ la informacion de ?? mediciones.
+ Son bien notorios los dos picos del Fe-55, donde el primero combina interaccion
+es de las dos primeras energías antes mencionadas, las cuales no pueden
+ ser diferenciadas pues sus valores están muy próximos; mientras que el
+ segundo pico esta asociado a los fotones de 6.49 keV.
+ Un hecho a tener en cuenta es que, habiendo hecho uso del skipper CCD,
+ en los histogramas debieran de verse los picos de cada número de electrones
+ (como en la mediciones con LED), pero estos no se observan.
+ Esto último muestra que el efecto observado previamente en la ganancia
+ es algo a tener muy en cuenta, y fundamental para realizar las mediciones
+ del factor de Fano con la precisión que el skipper CCD es capaz de alcanzar.
+ A pesar de esto, igualmente se llevo a cabo la extraccion de los clusters
+ en las mediciones, obteniendo las distribuciones que se observan en la
+ figura {ref}.
+ Conociendo el valor de la media y la varianza, se calculó el factor de
+ Fano para 5.9keV, resultando en F = 0.10 ± 0.01, el cual se corresponde con
+ resultados teóricos y de simulaciones{ref}{ref}.
+\end_layout
+
+\begin_layout Subsection
+Kapton
+\end_layout
+
+\begin_layout Standard
+En esta experiencia, se expuso la CCD a una muestra de Kapton, la cual fue
+ excitada utilizando una fuente de Fe-55 para la generación de fotones por
+ fluorescencia.
+ El Kapton es, en esencia, un adhesivo compuesto por oxigeno y carbono {ref}.
+ Se buscó verificar que la fuente radiactiva era capaz de excitar el Kapton
+ y así generar fotones por fluorescencia.
+ La figura {ref} muestra una comparación de una medición con Kapton y otra
+ sin este.
+ Se observa en los datos con el adhesivo una distribución en la vecindad
+ de los 200 e − que no se encuentra en el otro histograma.
+ Estos son fácilmente atribuibles al Kapton, mas es llamativo el hecho de
+ que solo haya una distribución observable en los resultados.
+ Una explicación posible es que los rayos-X del Fe-55 solamente pudiesen
+ excitar el Kapton para generar fotones de solo una energía.
+ Otra posibilidad es que la estadística no fuese suficiente como para generarse
+ una distribución notoria para los fotones incidentes sobre la CCD de otras
+ energías, por tanto, estos no pudieron ser observados en el histograma.
+\end_layout
+
+\begin_layout Subsection
+Perspectivas para Laboratorio 7
+\end_layout
+
+\begin_layout Standard
+En lo que respecta a laboratorio 7, el objetivo primordial es el de resolver
+ el problema observado en la ganancia al variar el tiempo de exposición.
+ El cual, a su vez, se observó en la medición de 
+\begin_inset Formula $^{55}$
+\end_inset
+
+Fe , ya que en esta medición no fue capaz de distinguir los picos de cargas.
+ En las siguientes secciones se mostraran los distintos esfuerzos por resolver
+ este inconveniente.
+\end_layout
+
+\begin_layout Standard
+Dado que el objetivo inicial de medir el factor de Fano para distintas energías
+ y temperaturas dependerá del tiempo que tome en resolver el problema de
+ la calibración comentado previamente, un objetivo razonable para laboratorio
+ 7 sería el de lograr la caracterización completa del sistema, y poder medir
+ el Fano utilizando 
+\begin_inset Formula $^{55}F_{e}$
+\end_inset
+
+ .
+ La realización de las mediciones subsiguientes, con otras energías y temperatur
+as, solo requerira del tiempo necesario a fin de conseguir la estadística
+ necesaria.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Laboratorio 7
+\end_layout
+
+\begin_layout Subsection
+Busqueda de soluciones a la variacion de la Ganancia
+\end_layout
+
+\begin_layout Standard
+En las siguientes secciones se mostraran diversos esfuerzos por resolver
+ el problema en la ganancia.
+ Se comenzará por un método innovador que cambiar la forma regular de toma
+ de datos con un CCD.
+ Luego se analizará la injerencia del crosstalk en las mediciones.
+ Y finalmente, luego de exponer con más detalle las variaciones de ganancia,
+ se mostrara un analisis de la temperatura de la CCD, y cambio en el setup
+ del circuito de salida, los cuales habrías de resolver u otorgar información
+ a fin de resolver este reto.
+\end_layout
+
+\begin_layout Subsubsection
+Pixeles 
+\begin_inset Quotes cld
+\end_inset
+
+Tracers
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el capítulo anterior se mostró la forma regular utilizada para el procesamien
+to de imagenes con CCD, la cual se basaba en el uso del overscan para extraer
+ la linea de base en los pixeles expuestos.
+ Hay un procesamiento extra que no se mencionó previamente, que se trata
+ del uso de los pixeles sin carga de la parte expuesta de la CCD.
+ La razón del uso de estos pixeles está en las variaciones de la linea de
+ base en el tiempo, es decir, si uno mide continuamente la carga de un pixel
+ vacío observará que su valor cambia sin una forma funcional conocida, o
+ en torno a un valor fijo.
+ Por tanto, la linea de base obtenida en el overscan en general no es completame
+nte representativo de ciertos pixeles en la linea de CCD que se está procesando;
+ en particular aquellos al inicio de la fila, los cuales fueron leidos un
+ tiempo previo a los del overscan que puede ser significativo.
+ Entonces el procesamiento se lleva a cabo del siguiente modo.
+ Extraer la linea de base con el overscan, y posteriormente, para cada pixel
+ con carga de la fila, realizar un promedio de los pixeles vacíos que le
+ circundan, y extraerle este valor al pixel en cuestión.
+\end_layout
+
+\begin_layout Standard
+Ahora, pensando en la experiencia de la calibración con el LED, este procesamien
+to extra es imposible de realizar, ya que al iluminar el CCD todos los pixeles
+ se ocupan con carga.
+ De este hecho surge la idea de generar los denominados pixeles 
+\begin_inset Quotes cld
+\end_inset
+
+tracer
+\begin_inset Quotes crd
+\end_inset
+
+.
+ La figura {} retrata el método para crear estos pixeles.
+ Al adquirir el valor de N pixeles, luego de medir el último de ellos y
+ desechar la carga, las cargas del registro horizontal no se mueven, y se
+ realiza nuevamente la medición del último pixel, el cual con seguridad
+ estara vacío, ya que un instante previo la carga fue quitada del mismo.
+ Este pixel es el 
+\begin_inset Quotes cld
+\end_inset
+
+tracer
+\begin_inset Quotes crd
+\end_inset
+
+.
+ La figura {} muestra una imágen obtenida habiendo implementado este método,
+ midiendo un pixel 
+\begin_inset Quotes cld
+\end_inset
+
+tracer
+\begin_inset Quotes crd
+\end_inset
+
+ cada 3 pixeles expuestos.
+\end_layout
+
+\begin_layout Standard
+Se realizado nuevamente la medición de calibración, con un paso de 1 segundo
+ de exposición, 2000 muestras de skipper, 10 lineas de CCD, y un 
+\begin_inset Quotes cld
+\end_inset
+
+tracer
+\begin_inset Quotes crd
+\end_inset
+
+ cada 3 pixeles reales.
+ Se observa en la figura {ref 1 segundos exp} que el método se muestra eficiente
+, puesto que la medición es cualitativamente identica a la obtenida con
+ la hecha utilizando el método regular.
+ Por otro lado, la figura {} muestra que la ganancia continua variando,
+ generando la busca de otras opciones para solución.
+\end_layout
+
+\begin_layout Subsubsection
+Crosstalk
+\end_layout
+
+\begin_layout Standard
+Previamente se mencionó que las mediciones llevadas a cabo se realizaron
+ en el cuadrante U1 de la CCD, la cual poseía el menor ruido electronico
+ de los cuatro.
+ Igualmente, en el proceso de mediciones, los otros cuadrantes son medidos,
+ a pesar de no utilizar los datos obtenidos.
+ La figura {} muestra que en el proceso de medición, los señal medida en
+ un cuadrante afecta a los demás.
+ A este efecto se le denomina crosstalk, y este efecto siempre se encuentra
+ en mayor o menos medida en el CCD.
+ Este puede surgir de la CCD, los cables coaxiles de la electrónica, o dentro
+ del Monsoon mismo.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Analisis de la temperatura
+\end_layout
+
+\begin_layout Subsubsection
+Cambio en la resistencia de Carga
+\end_layout
+
+\begin_layout Subsubsection
+Buscando pistas
+\end_layout
+
+\begin_layout Subsection
+Simulación Montecarlo
+\end_layout
+
+\begin_layout Subsubsection
+Corriente Oscura
+\end_layout
+
+\begin_layout Subsubsection
+Clusters
+\end_layout
+
+\begin_layout Subsubsection
+Prueba a orden cero
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+ Boyle, W.
+ S.
+ Nobel lecture: CCD–An extension of man’s view.
+ Rev.
+ Mod.
+ Phys., 82, 2305–2306, Aug 2010.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
